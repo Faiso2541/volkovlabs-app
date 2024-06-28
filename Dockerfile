@@ -25,7 +25,7 @@ ENV GF_ANALYTICS_CHECK_FOR_UPDATES=false
 ENV GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/news.json
 
 ## Paths
-ENV GF_PATHS_PROVISIONING="/etc/grafana/provisioning"
+ENV GF_PATHS_PROVISIONING="/etc/grafana@McEmergy/provisioning"
 ENV GF_PATHS_PLUGINS="/var/lib/grafana/plugins"
 
 ##################################################################
@@ -90,7 +90,7 @@ RUN sed -i "s|\[\[.NavTree\]\],|nav,|g; \
 RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|AppTitle="Grafana"|AppTitle="Volkov Labs"|g' {} \;
 
 ## Update Login Title
-RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|LoginTitle="Welcome to Grafana"|LoginTitle="Welcome to Volkov Labs"|g' {} \;
+RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|LoginTitle="Welcome to McEnergy Dashboard"|LoginTitle="Welcome to Volkov Labs"|g' {} \;
 
 ## Remove Documentation, Support, Community in the Footer
 RUN find /usr/share/grafana/public/build/ -name *.js -exec sed -i 's|\[{target:"_blank",id:"documentation".*grafana_footer"}\]|\[\]|g' {} \;
